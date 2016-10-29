@@ -1,0 +1,11 @@
+.navHeader{
+	background-color:#323232; 
+	color:white;
+	text-align:center; 
+	border-right:1px solid;
+	border-top:1px solid;
+}
+
+.postHeader{
+	display: inline;
+}

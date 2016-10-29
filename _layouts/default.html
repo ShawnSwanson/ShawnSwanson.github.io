@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  {% include head.html %}
+
+  <body>
+    <div class="container-fluid">
+	    <div class="row">
+		    <div class="col-sm-12" style="background-color:#323232; color:white;text-align:center">
+		        <br />
+		        <a href="{{baseurl}}/index.html" style="color: white">
+		        	<h1 style="font-size:75px;margin-bottom:0px;">shawn<span style="font-weight:bold">swanson</span></h1>
+		        </a>
+		        <br />
+	    
+    {% if page.url == '/resume.html' %}
+    	{% include subhead_resume.html %}
+    {% else %}
+    	{% include subhead_blog.html %}
+    {% endif %}
+
+    {% include nav.html %}
+
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+    	{{content}}
+    </div>
+    <div class="col-md-1"></div>
+    
+  </body>
+
+  {% include footer.html %}
+</html>

@@ -1,0 +1,28 @@
+---
+layout: default
+---
+
+<div class="home">
+
+  <h1 class="page-heading" style="font-weight: bold;">Latest Entries</h1>
+
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li style="list-style-type: none;">
+        <div class="postHeader">
+          <h2>
+            <a class="post-link"  style="color: #323232;" href="{{post.url | relative_url}}">{{ post.title | escape }}
+            </a>
+          </h2>
+          <span class="post-meta postHeader">{{ post.date | date: "%b %-d, %Y" }}</span>
+          <br>
+          <p>
+            <i>{{post.excerpt | strip_html}} </i>
+          </p>
+        </div>
+        <hr/>
+      </li>
+    {% endfor %}
+  </ul>
+
+</div>
